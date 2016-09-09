@@ -8,7 +8,7 @@ self.insert = function(dataSize,done){
 	var mysql = require('mq-node')({
 		host     : 'localhost',
 		user     : 'root',
-		password : '',
+		password : 'root',
 	});
 
 	var run = [];
@@ -32,13 +32,13 @@ self.insert = function(dataSize,done){
 	})
 
 	run.push(function(callback){
-		mysql.query('DROP TABLE test',function(data,err){
+		mysql.query('DROP TABLE IF EXISTS test',function(data,err){
 			callback();
 		});
 	});
 
 	run.push(function(callback){
-		mysql.query('DROP TABLE team',function(data,err){
+		mysql.query('DROP TABLE IF EXISTS team',function(data,err){
 			callback();
 		});
 	});
