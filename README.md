@@ -3,7 +3,7 @@
 #### Installation
 
 ```
-git clone https://github.com/webcaetano/mongo-mysql.git
+git clone https://github.com/jacksonfdam/mongo-mysql.git
 cd mongo-mysql
 npm install
 node index
